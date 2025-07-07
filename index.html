@@ -36,7 +36,7 @@
 
 
     .card {
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: transparent;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       max-width: 500px;
@@ -52,9 +52,7 @@
     }
 
     .card h1 {
-      position: relative;
-      top: -20px;    /* sobe 20px */
-      right: -15px;  /* move 15px para a direita */
+      text-align: right;
       font-size: 2rem;
       color: #b8867e;
       margin-bottom: 10px;
@@ -68,13 +66,14 @@
     }
 
     .card p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 0.85rem; /* deixa o texto menor */
+      line-height: 1.4;
       margin-bottom: 20px;
     }
 
     .date-box {
-      background-color: #f5e6df;
+      background-color: transparent;
+      box-shadow: none; 
       border-radius: 12px;
       padding: 15px;
       margin: 20px 0;
