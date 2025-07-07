@@ -4,11 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Convite Baby Shower</title>
+
+  <!-- Fonte decorativa -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://i.imgur.com/CGWHcsp.jpg') no-repeat center center fixed;
+      background: url('data:image/jpeg;base64,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') no-repeat center center fixed;
       background-size: cover;
       color: #333;
       display: flex;
@@ -17,22 +22,42 @@
       min-height: 100vh;
       padding: 20px;
     }
+
     .card {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.92);
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       max-width: 500px;
       width: 100%;
       padding: 30px;
       text-align: center;
+      animation: fadeIn 1.2s ease;
     }
-    .card img {
-      max-width: 180px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      color: #b8867e;
+      margin-bottom: 10px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #7a645d;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
       margin-bottom: 20px;
     }
-    .card h1 { font-size: 2rem; color: #b8867e; margin-bottom: 10px; }
-    .card h2 { font-size: 1.2rem; margin-bottom: 20px; color: #7a645d; }
-    .card p { font-size: 1rem; line-height: 1.6; margin-bottom: 20px; }
+
     .date-box {
       background-color: #f5e6df;
       border-radius: 12px;
@@ -40,17 +65,21 @@
       margin: 20px 0;
       font-weight: bold;
     }
+
     .rsvp {
       margin-top: 20px;
     }
+
     .rsvp a {
       color: #b8867e;
       text-decoration: none;
       font-weight: bold;
     }
+
     .rsvp a:hover {
       text-decoration: underline;
     }
+
     @media (max-width: 600px) {
       .card h1 { font-size: 1.5rem; }
       .card h2 { font-size: 1rem; }
@@ -64,7 +93,7 @@
     <p>Estamos muito felizes em compartilhar esse momento especial com você! Venha celebrar a chegada da nossa princesa com muito amor e alegria.</p>
 
     <div class="date-box">
-      📅 Domingo, 20 de Julho de 2025<br/>
+      📅 Domingo, 5 de Outubro de 2025<br/>
       🕓 16:00h<br/>
       📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
       <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">🗺️ Ver no Google Maps</a><br/>
@@ -72,10 +101,10 @@
     </div>
 
     <p class="rsvp">
-  Confirme sua presença:<br/><br/>
-  <a href="https://wa.me/351912345678?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">✅ Sim, vou!</a><br/><br/>
-  <a href="https://wa.me/351912345678?text=Olá!%20Infelizmente%20não%20vou%20poder%20ir.%20😢" target="_blank" rel="noopener noreferrer">❌ Não posso ir</a>
-</p>
+      Confirme sua presença:<br/><br/>
+      <a href="https://wa.me/351912345678?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">✅ Sim, vou!</a><br/><br/>
+      <a href="https://wa.me/351912345678?text=Olá!%20Infelizmente%20não%20vou%20poder%20ir.%20😢" target="_blank" rel="noopener noreferrer">❌ Não posso ir</a>
+    </p>
   </div>
 </body>
 </html>
