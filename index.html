@@ -1,87 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Convite Baby Shower</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Pacifico&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(#fdf6f2, #f5eae3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f9e4f4, #ffe9ec);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      padding: 30px;
       text-align: center;
-      color: #4b2e2e;
     }
-
-    .container {
-      padding: 30px 20px;
-      max-width: 600px;
-      margin: auto;
+    .card img {
+      max-width: 180px;
+      margin-bottom: 20px;
     }
-
-    .bear {
-      width: 150px;
-      margin: 20px auto;
+    .card h1 { font-size: 2rem; color: #d86b9f; margin-bottom: 10px; }
+    .card h2 { font-size: 1.2rem; margin-bottom: 20px; color: #666; }
+    .card p { font-size: 1rem; line-height: 1.6; margin-bottom: 20px; }
+    .date-box {
+      background-color: #ffe0f0;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px 0;
+      font-weight: bold;
     }
-
-    h1 {
-      font-family: 'Pacifico', cursive;
-      color: #a86e4a;
-      font-size: 2.8em;
-      margin-bottom: 0;
-    }
-
-    .highlight {
-      font-size: 1.5em;
-      color: #3fbaf5;
-      margin: 10px 0;
-    }
-
-    .info {
-      font-size: 1.1em;
+    .rsvp {
       margin-top: 20px;
-      line-height: 1.6em;
     }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #888;
+    .rsvp a {
+      color: #d86b9f;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-
-      .highlight {
-        font-size: 1.2em;
-      }
-
-      .info {
-        font-size: 1em;
-      }
+    @media (max-width: 600px) {
+      .card h1 { font-size: 1.5rem; }
+      .card h2 { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="bear" src="https://i.imgur.com/WUE3xIX.png" alt="Ursinho com balões"/>
-
-    <p>Join us for a baby shower honoring</p>
-    <h1>Ryan Williams</h1>
-
-    <div class="highlight">Friday • 4.12.23 • 3PM</div>
-
-    <div class="info">
-      The Williams Residence<br>
-      3456 Anywhere Location<br>
-      Chicago, IL 56776<br>
-      📞 RSVP: (567) 445-3344
-    </div>
-
-    <div class="footer">🎁 Registered at Target</div>
+  <div class="card">
+    <img src="https://i.imgur.com/WUE3xIX.png" alt="Ursinho com balões" />
+    <h1>Você está convidado!</h1>
+    <h2>Chá de Bebê da Mariana 💕</h2>
+    <p>Estamos muito felizes em compartilhar esse momento especial com você! Venha celebrar a chegada da nossa princesa com muito amor e alegria.</p>
+    <div class="date-box">
+  📅 Domingo, 20 de Julho de 2025<br/>
+  🕓 16:00h<br/>
+  📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
+  <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank">🗺️ Ver no Google Maps</a><br/>
+  <a href="https://waze.com/ul?ll=41.446405,-7.960141&navigate=yes" target="_blank">🚗 Ver no Waze</a>
+</div>
+    <p class="rsvp">
+      Confirma a tua presença:<br/>
+      <a href="https://wa.me/351937435600" target="_blank">Enviar mensagem no WhatsApp</a>
+    </p>
   </div>
 </body>
 </html>
