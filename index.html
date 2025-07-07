@@ -5,43 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Convite Baby Shower</title>
 
-  <!-- Fonte decorativa -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('https://raw.githubusercontent.com/paraujocm/baby-shower/main/895c5b21-2741-4147-aed3-6cf1349e6811.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; /* padrão para desktop */
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://raw.githubusercontent.com/paraujocm/baby-shower/main/895c5b21-2741-4147-aed3-6cf1349e6811.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-/* Estilos para telas menores (ex: telemóveis) */
-@media (max-width: 768px) {
-  body {
-    background-size: contain; /* mostra a imagem inteira */
-    background-position: top center; /* alinha o topo da imagem */
-  }
-}
-
+    @media (max-width: 768px) {
+      body {
+        background-size: contain;
+        background-position: top center;
+      }
+    }
 
     .card {
       background-color: transparent;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       max-width: 500px;
       width: 100%;
       padding: 30px;
+      position: relative;
       text-align: center;
       animation: fadeIn 1.2s ease;
     }
@@ -51,74 +47,94 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    .card h1 {
-      text-align: right;
-      font-size: 2rem;
-      color: #b8867e;
-      margin-bottom: 10px;
+    h1 {
       font-family: 'Pacifico', cursive;
-}
-
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #7a645d;
+      color: #b8867e;
+      font-size: 2rem;
+      position: absolute;
+      top: 40px;
+      right: 60px;
     }
 
-    .card p {
-      font-size: 0.85rem; /* deixa o texto menor */
-      line-height: 1.4;
-      margin-bottom: 20px;
+    .intro {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: left;
+      margin-top: 100px;
+      margin-left: 20px;
+      margin-bottom: 30px;
     }
 
     .date-box {
-      background-color: transparent;
-      box-shadow: none; 
-      border-radius: 12px;
-      padding: 15px;
-      margin: 20px 0;
+      font-size: 0.85rem;
       font-weight: bold;
+      background-color: rgba(255,255,255,0.6);
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 90%;
+      margin: 0 auto 20px auto;
+      text-align: left;
+      position: relative;
+      left: -40px; /* move para a esquerda */
+    }
+
+    .date-box a {
+      display: block;
+      color: blue;
+      text-decoration: none;
+      margin-top: 5px;
+    }
+
+    .date-box a:hover {
+      text-decoration: underline;
     }
 
     .rsvp {
-      margin-top: 20px;
+      text-align: left;
+      margin-top: 50px;
+      margin-left: 20px;
     }
 
     .rsvp a {
-      position: relative;
-      top: 10px;   /* desce 10px */
-      left: -10px; /* move 10px para a esquerda */
       color: #b8867e;
       text-decoration: none;
       font-weight: bold;
-}
+      font-size: 1rem;
+    }
 
     .rsvp a:hover {
       text-decoration: underline;
     }
 
     @media (max-width: 600px) {
-      .card h1 { font-size: 1.5rem; }
-      .card h2 { font-size: 1rem; }
+      h1 { font-size: 1.5rem; right: 30px; }
+      .intro { font-size: 0.8rem; margin-left: 10px; }
+      .date-box { font-size: 0.75rem; left: -20px; }
     }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Chá de Revelação</h1>
-    <p>Estamos ansiosos e muito felizes para conhecer o nosso bebé. Esperamos que consigas estar connosco neste dia tão feliz.</p>
+
+    <p class="intro">
+      Estamos ansiosos e muito felizes para conhecer o nosso bebé. <br>
+      Esperamos que consigas estar connosco neste dia tão feliz.
+    </p>
 
     <div class="date-box">
       📅 Domingo, 5 de Outubro de 2025<br/>
       🕓 16:00h<br/>
       📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
-      <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">🗺️ Ver no Google Maps</a><br/>
+      <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">🗺️ Ver no Google Maps</a>
       <a href="https://waze.com/ul?ll=41.446405,-7.960141&navigate=yes" target="_blank" rel="noopener noreferrer">🚗 Ver no Waze</a>
     </div>
 
-    <p class="rsvp">
-      <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">Confirmar presença! 🤎 </a><br/><br/>
-    </p>
+    <div class="rsvp">
+      <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">
+        Confirmar presença! 🤎
+      </a>
+    </div>
   </div>
 </body>
 </html>
