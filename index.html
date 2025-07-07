@@ -8,7 +8,8 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #f9e4f4, #ffe9ec);
+      background: url('https://i.imgur.com/CGWHcsp.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       display: flex;
       justify-content: center;
@@ -17,7 +18,7 @@
       padding: 20px;
     }
     .card {
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       max-width: 500px;
@@ -29,11 +30,11 @@
       max-width: 180px;
       margin-bottom: 20px;
     }
-    .card h1 { font-size: 2rem; color: #d86b9f; margin-bottom: 10px; }
-    .card h2 { font-size: 1.2rem; margin-bottom: 20px; color: #666; }
+    .card h1 { font-size: 2rem; color: #b8867e; margin-bottom: 10px; }
+    .card h2 { font-size: 1.2rem; margin-bottom: 20px; color: #7a645d; }
     .card p { font-size: 1rem; line-height: 1.6; margin-bottom: 20px; }
     .date-box {
-      background-color: #ffe0f0;
+      background-color: #f5e6df;
       border-radius: 12px;
       padding: 15px;
       margin: 20px 0;
@@ -43,9 +44,12 @@
       margin-top: 20px;
     }
     .rsvp a {
-      color: #d86b9f;
+      color: #b8867e;
       text-decoration: none;
       font-weight: bold;
+    }
+    .rsvp a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 600px) {
       .card h1 { font-size: 1.5rem; }
@@ -59,17 +63,20 @@
     <h1>Você está convidado!</h1>
     <h2>Chá de Bebê da Mariana 💕</h2>
     <p>Estamos muito felizes em compartilhar esse momento especial com você! Venha celebrar a chegada da nossa princesa com muito amor e alegria.</p>
+
     <div class="date-box">
-  📅 Domingo, 20 de Julho de 2025<br/>
-  🕓 16:00h<br/>
-  📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
-  <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank">🗺️ Ver no Google Maps</a><br/>
-  <a href="https://waze.com/ul?ll=41.446405,-7.960141&navigate=yes" target="_blank">🚗 Ver no Waze</a>
-</div>
+      📅 Domingo, 20 de Julho de 2025<br/>
+      🕓 16:00h<br/>
+      📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
+      <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">🗺️ Ver no Google Maps</a><br/>
+      <a href="https://waze.com/ul?ll=41.446405,-7.960141&navigate=yes" target="_blank" rel="noopener noreferrer">🚗 Ver no Waze</a>
+    </div>
+
     <p class="rsvp">
-      Confirma a tua presença:<br/>
-      <a href="https://wa.me/351937435600" target="_blank">Enviar mensagem no WhatsApp</a>
-    </p>
+  Confirme sua presença:<br/><br/>
+  <a href="https://wa.me/351912345678?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">✅ Sim, vou!</a><br/><br/>
+  <a href="https://wa.me/351912345678?text=Olá!%20Infelizmente%20não%20vou%20poder%20ir.%20😢" target="_blank" rel="noopener noreferrer">❌ Não posso ir</a>
+</p>
   </div>
 </body>
 </html>
