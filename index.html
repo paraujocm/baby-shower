@@ -56,12 +56,20 @@
       right: 50px;
     }
 
+    .announcement {
+      font-family: 'Pacifico', cursive;
+      color: #b8867e;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
+
     .intro {
       font-size: 0.9rem;
       font-weight: bold;
       line-height: 1.5;
       text-align: left;
-      margin-top: 100px;
       margin-left: 20px;
       margin-bottom: 30px;
     }
@@ -73,11 +81,11 @@
       background-color: transparent;
       padding: 10px;
       border-radius: 12px;
-      max-width: 90%;
+      max-width: 100%;
       margin: 0 auto 20px auto;
       text-align: left;
       position: relative;
-      left: -40px; /* move para a esquerda */
+      left: 0;
     }
 
     .date-box a {
@@ -110,14 +118,17 @@
 
     @media (max-width: 600px) {
       h1 { font-size: 1.5rem; right: 30px; }
+      .announcement { font-size: 1.1rem; margin-top: 60px; margin-bottom: 15px; }
       .intro { font-size: 0.8rem; margin-left: 10px; }
-      .date-box { font-size: 0.75rem; left: -20px; }
+      .date-box { font-size: 0.75rem; left: 0; max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Chá de Revelação</h1>
+
+    <p class="announcement">Vamos ser papás! 🤎</p>
 
     <p class="intro">
       Estamos ansiosos e muito felizes para conhecer o nosso bebé. <br>
@@ -129,14 +140,15 @@
       🕓 16:00h<br/>
       📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
       <div style="display: flex; gap: 10px; align-items: center;">
-  <a href="https://www.google.com/maps?q=41.446405,-7.960141" style="color: #b8867e; font-weight: bold; ; margin-left: 1.7em"> Google Maps
-  </a>
-  <a href="https://waze.com/ul?ll=41.446405,-7.960141" style="color: #b8867e; font-weight: bold;"> / Waze
-  </a>
-</div>
+        <a href="https://www.google.com/maps?q=41.446405,-7.960141" style="color: #b8867e; font-weight: bold; margin-left: 1.7em"> Google Maps
+        </a>
+        <a href="https://waze.com/ul?ll=41.446405,-7.960141" style="color: #b8867e; font-weight: bold;"> / Waze
+        </a>
+      </div>
+    </div>
 
     <div class="rsvp">
-      <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20🤎" target="_blank" rel="noopener noreferrer">
         Confirmar presença! 🤎
       </a>
     </div>
