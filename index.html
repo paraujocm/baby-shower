@@ -2,10 +2,18 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Chá de Revelação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <style>
-    /* Estilos da imagem inicial */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Tela inicial */
     #intro {
       position: fixed;
       top: 0; left: 0;
@@ -15,19 +23,26 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
       z-index: 10;
+      opacity: 1;
+      transition: opacity 1.5s ease-in-out;
     }
+
+    #intro.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     #intro img {
       width: 100vw;
       height: 100vh;
-      object-fit: contain;
-      /* Remove animação */
+      object-fit: cover;
     }
 
-    /* Estilos do conteúdo do convite */
+    /* Conteúdo principal */
     #content {
-      display: none;
+      display: flex;
+      position: relative;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-image: url('https://raw.githubusercontent.com/paraujocm/baby-shower/main/895c5b21-2741-4147-aed3-6cf1349e6811.jpg');
       background-repeat: no-repeat;
@@ -35,67 +50,79 @@
       background-attachment: fixed;
       background-size: cover;
       color: #333;
-      display: flex;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
       text-align: center;
     }
-    .card {
-      background-color: rgba(255 255 255 / 0.7);
-      max-width: 500px;
-      width: 100%;
-      padding: 30px;
-      position: relative;
-      border-radius: 10px;
-      animation: fadeIn 1.2s ease forwards;
+
+    #content.visible {
+      opacity: 1;
     }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.75);
+      max-width: 500px;
+      width: 90%;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
     h1 {
       font-family: 'Pacifico', cursive;
       color: #b8867e;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .announcement {
       font-family: 'Pacifico', cursive;
       color: #b8867e;
       font-size: 1.4rem;
       margin-bottom: 1rem;
     }
+
     .intro {
       font-weight: bold;
       line-height: 1.5;
       margin-bottom: 1.5rem;
       text-align: left;
     }
+
     .date-box {
       color: #b8867e;
       font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 12px;
+      padding: 10px 0;
       margin-bottom: 1.5rem;
       text-align: left;
     }
+
     .date-box a {
       color: #b8867e;
       text-decoration: none;
       font-weight: bold;
       margin-right: 1em;
     }
+
     .date-box a:hover {
       text-decoration: underline;
     }
+
     .rsvp a {
       color: #b8867e;
       font-weight: bold;
       font-size: 0.9rem;
       text-decoration: none;
     }
+
     .rsvp a:hover {
       text-decoration: underline;
     }
+
     @media (max-width: 768px) {
       .card {
         padding: 20px;
@@ -110,21 +137,15 @@
         font-size: 0.9rem;
       }
     }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: scale(0.95);}
-      to {opacity: 1; transform: scale(1);}
-    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Tela inicial com a imagem -->
+  <!-- Tela de introdução -->
   <div id="intro">
     <img src="https://raw.githubusercontent.com/paraujocm/baby-shower/main/b6c92d1be41461840e07b393631fe87d.jpg" alt="Bem-vindos!" />
   </div>
 
-  <!-- Conteúdo do convite oculto inicialmente -->
+  <!-- Conteúdo principal -->
   <div id="content">
     <div class="card">
       <p class="announcement">Vamos ser papás! 🤎</p>
@@ -136,11 +157,11 @@
         📅 Domingo, 5 de Outubro de 2025<br/>
         🕓 16:00h<br/>
         📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
-        <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">Google Maps</a>
-        <a href="https://waze.com/ul?ll=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">/ Waze</a>
+        <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank">Google Maps</a>
+        <a href="https://waze.com/ul?ll=41.446405,-7.960141" target="_blank">/ Waze</a>
       </div>
       <div class="rsvp">
-        <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank">
           Confirmar presença! 🤎
         </a>
       </div>
@@ -148,11 +169,10 @@
   </div>
 
   <script>
-    // Após 5 segundos, esconde o intro e mostra o conteúdo
     setTimeout(() => {
-      document.getElementById('intro').style.display = 'none';
-      document.getElementById('content').style.display = 'flex';
-    }, 5000);
+      document.getElementById('intro').classList.add('fade-out');
+      document.getElementById('content').classList.add('visible');
+    }, 5000); // tempo da imagem inicial em milissegundos
   </script>
 </body>
 </html>
