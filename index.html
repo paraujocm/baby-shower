@@ -2,16 +2,48 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diogo & Inês</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bem-vindos / Chá de Revelação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
+    /* Estilos gerais */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fef9f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Container da imagem inicial */
+    #intro {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fef9f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 2s ease-in-out;
+      z-index: 10;
+    }
+    #intro img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    /* Container do convite, inicialmente escondido */
+    #invite {
+      display: none;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
       background-image: url('https://raw.githubusercontent.com/paraujocm/baby-shower/main/895c5b21-2741-4147-aed3-6cf1349e6811.jpg');
       background-repeat: no-repeat;
       background-position: center center;
@@ -22,175 +54,127 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
     }
-
-    @media (max-width: 768px) {
-      body {
-        background-size: contain;
-        background-position: top center;
-      }
-    }
-
+    /* Cartão do convite */
     .card {
-      background-color: transparent;
+      background-color: rgba(254, 249, 244, 0.85);
       max-width: 500px;
       width: 100%;
       padding: 30px;
       position: relative;
       text-align: center;
-      animation: fadeIn 1.2s ease;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      animation: fadeIn 1.2s ease forwards;
+      font-size: 1rem;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
     h1 {
       font-family: 'Pacifico', cursive;
       color: #b8867e;
       font-size: 2rem;
-      position: absolute;
-      top: 10px;
-      right: 0;
-      padding-right: 10px;
+      margin-bottom: 15px;
     }
-
     .announcement {
       font-family: 'Pacifico', cursive;
       color: #b8867e;
       font-size: 1.4rem;
-      text-align: center;
-      margin-top: 80px;
       margin-bottom: 20px;
     }
-
     .intro {
-      font-size: 0.9rem;
       font-weight: bold;
       line-height: 1.5;
-      text-align: left;
-      margin-top: 120px;
-      margin-left: 20px;
       margin-bottom: 30px;
+      color: #444;
     }
-
     .date-box {
       color: #b8867e;
-      font-size: 0.85rem;
       font-weight: bold;
-      background-color: transparent;
       padding: 10px 20px;
       border-radius: 12px;
-      width: 100%;
-      margin: 40px 0 20px 0;
-      position: relative;
-      left: 0;
-      right: 0;
+      background-color: transparent;
+      margin-bottom: 20px;
       text-align: left;
-      box-sizing: border-box;
     }
-
     .date-box a {
-      display: block;
       color: #b8867e;
       text-decoration: none;
-      margin-top: 5px;
+      font-weight: bold;
+      margin-right: 15px;
     }
-
     .date-box a:hover {
       text-decoration: underline;
     }
-
     .rsvp {
+      margin-top: 20px;
       text-align: left;
-      margin-top: 80px;
-      margin-left: 0;
-      width: 100%;
-      position: relative;
-      left: 0;
-      right: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-      box-sizing: border-box;
     }
-
     .rsvp a {
       color: #b8867e;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.75rem;
+      font-size: 0.9rem;
     }
-
     .rsvp a:hover {
       text-decoration: underline;
     }
-
+    /* Fade-in keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    /* Responsivo */
     @media (max-width: 600px) {
+      .card {
+        padding: 20px;
+        font-size: 0.9rem;
+      }
       h1 {
         font-size: 1.5rem;
-        right: 0;
-        top: 10px;
-        padding-right: 10px;
       }
       .announcement {
-        font-size: 1.1rem;
-        margin-top: 60px;
-        margin-bottom: 15px;
-      }
-      .intro {
-        font-size: 0.8rem;
-        margin-left: 10px;
-        margin-top: 100px;
-      }
-      .date-box {
-        font-size: 0.75rem;
-        left: 0;
-        right: 0;
-        max-width: 100%;
-        margin-top: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .rsvp {
-        margin-top: 60px;
-        margin-left: 0;
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Chá de Revelação</h1>
+  <!-- Tela inicial com a imagem -->
+  <div id="intro">
+    <img src="https://raw.githubusercontent.com/paraujocm/baby-shower/main/b6c92d1be41461840e07b393631fe87d.jpg" alt="Bem-vindos!" />
+  </div>
 
-    <p class="announcement">Vamos ser papás! 🤎</p>
-
-    <p class="intro">
-      Estamos ansiosos e muito felizes para conhecer o nosso bebé. <br>
-      Esperamos que consigas estar connosco neste dia tão feliz.
-    </p>
-
-    <div class="date-box">
-      📅 Domingo, 5 de Outubro de 2025<br/>
-      🕓 16:00h<br/>
-      📍 Rua dos Casais, 278, Canedo de Basto<br/><br/>
-      <div style="display: flex; gap: 10px; align-items: center;">
-        <a href="https://www.google.com/maps?q=41.446405,-7.960141" style="color: #b8867e; font-weight: bold; margin-left: 1.7em"> Google Maps
-        </a>
-        <a href="https://waze.com/ul?ll=41.446405,-7.960141" style="color: #b8867e; font-weight: bold;"> / Waze
+  <!-- Convite escondido inicialmente -->
+  <div id="invite">
+    <div class="card">
+      <p class="announcement">Vamos ser papás! 🤎</p>
+      <p class="intro">
+        Estamos ansiosos e muito felizes para conhecer o nosso bebé.<br />
+        Esperamos que consigas estar connosco neste dia tão feliz.
+      </p>
+      <div class="date-box">
+        📅 Domingo, 5 de Outubro de 2025<br />
+        🕓 16:00h<br />
+        📍 Rua dos Casais, 278, Canedo de Basto<br /><br />
+        <a href="https://www.google.com/maps?q=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        <a href="https://waze.com/ul?ll=41.446405,-7.960141" target="_blank" rel="noopener noreferrer">Waze</a>
+      </div>
+      <div class="rsvp">
+        <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">
+          Confirmar presença! 🤎
         </a>
       </div>
     </div>
-
-    <div class="rsvp">
-      <a href="https://wa.me/351937435600?text=Olá!%20Confirmo%20a%20minha%20presença!%20💖" target="_blank" rel="noopener noreferrer">
-        Confirmar presença! 🤎
-      </a>
-    </div>
   </div>
+
+  <script>
+    // Após 5 segundos troca a visibilidade
+    setTimeout(() => {
+      document.getElementById('intro').style.display = 'none';
+      const invite = document.getElementById('invite');
+      invite.style.display = 'flex';
+      invite.style.animation = 'fadeIn 1.2s ease forwards';
+      document.body.style.overflow = 'auto'; // Permite scroll se precisar
+    }, 5000);
+  </script>
 </body>
 </html>
